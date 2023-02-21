@@ -1,2 +1,2 @@
 # Trustify
-# Use Master branch for usage
+# Use Master branch (not main)
