@@ -1,0 +1,33 @@
+.recent_cardgroup{
+    display: flex;
+    margin: 1.5rem;
+    gap: 1rem;
+}
+.card{
+    width: fit-content;
+    /* display: flex; */
+}
+.card-body{
+    display: flex;
+}
+.recent_title{
+    font-size: 2rem;
+    margin-left: 2rem;
+    margin-top: 4rem;
+    color: rgb(35, 35, 35);
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 700;
+}
+.recent_tempimg{
+    height: 11.2rem;
+    text-align: center;
+    margin-left: 3px;
+}
+.recentcard_name{
+    font-size: 1.2rem;
+    opacity: 70%;
+    color: rgb(29, 29, 29);
+    font-family: 'Work Sans', sans-serif;
+    margin-left: 5px;
+    margin-top: 10px;
+}

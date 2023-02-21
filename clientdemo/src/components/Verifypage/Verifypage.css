@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@300&family=Mulish:wght@800&family=Poppins:wght@400;700&family=Sofia+Sans:wght@300;400;800&family=Ubuntu:wght@700&display=swap');
+.verify{
+    
+    display: flex;
+    vertical-align: middle;
+    background: url(./loginmain_bg.jpg);
+    background-size: cover;
+    height: 29rem;
+    border-radius: 20px;
+    width: 80%;
+    margin: 10%;
+    margin-top: 2%;
+    padding: 1.5rem;
+}
+.verify-leftside{
+    /* border: 2px solid black; */
+    /* height: 5rem; */
+    width: 22%;
+    border-right: 4px solid rgba(0, 0, 0, 0.25);
+    padding-right: 1rem;
+}
+.verify-leftside img{
+    border-radius: 15px;  
+    height: 10rem;
+    width: 11rem;
+}
+.verify_usertitle{
+    /* border: 2px solid black; */
+    width: 11rem;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+.verify_iserid{
+    font-size: 1rem;
+    margin-left: 3rem;
+    color: rgba(0, 0, 0, 0.662);
+}
+.verifymark{
+    color: #3543ff;
+    margin-top: 10.2rem;
+    opacity: 70%;
+    width: 11rem;
+    font-size: 1.5rem;
+}
+
+
+.verify-rightside{
+    font-family: 'Sofia Sans', sans-serif;
+    /* border: 2px solid black; */
+    /* height: 5rem; */
+    width: 78%;
+    padding: 1.5rem;
+    padding-top: 0px;
+    padding-left: 2.5rem;
+    color: rgb(42, 42, 42);
+}
+.orgname{
+    font-size: 3rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 1rem;
+    
+}
+.verifylabel{
+    font-size: 1rem;
+    font-weight: 700;
+}
+.verifylabeltype{
+    font-size: 1rem;
+    margin-left: 20rem;
+    font-weight: 700;
+}
+.verifylabeltill{
+    font-size: 1rem;
+    margin-left: 22.8rem;
+    font-weight: 700;
+}
+.certitype{
+    font-size: 2rem;
+    margin-top: 4px;
+}
+.eventdetails{
+    display: flex;
+    margin-top: 1rem;
+}
+.eventname{
+    margin-top: 4px;
+    font-size: 1.5rem;
+}
+.eventtype{
+    margin-top: 4px;
+    font-size: 1.5rem;
+    /* margin-left: 20rem; */
+}
+.validfrom{
+    margin-top: 4px;
+    font-size: 1.5rem;
+}
+.validtill{
+    margin-top: 4px;
+    font-size: 1.5rem;
+}
+.aboutorg{
+    margin-top: 4px;
+    font-size: 1rem;
+    overflow-y: scroll;
+    border: 1.5px solid black;
+    height: 2.7rem;
+    border-radius: 5px;
+    padding-left: 5px;
+}
+.eventTime{
+    display: flex;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.verifyspanlogo{
+    font-size: 1.2rem;
+    margin-right: 5px;
+}
