@@ -1,4 +1,4 @@
-// add index.js to server folder 
+ // add index.js to server folder 
 // write npm init to make package.json file
 // install express
 // install nodemon
@@ -33,10 +33,13 @@ app.get('/', (req, res) => {
 	res.send(`hello`);
 });
 
-app.get('/about', middleware, (req, res) => {
-	res.send(`About sec`);
-});
+// app.get('/about', (req, res) => {
+// 	res.send(`About sec`);
+// });
 
+app.get('/contact', (req, res) => {
+	res.send(`contact sec`);
+});
 
 app.listen(PORT, () => {
 	console.log(`server is running in ${PORT}`);

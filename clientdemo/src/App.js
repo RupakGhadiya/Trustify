@@ -13,6 +13,7 @@ import Signup from './components/signup/Signup'
 import Qronly from './components/home/Qronly/Qronly'
 import Errorpage from './components/error page/Errorpage'
 import Verifypage from './components/Verifypage/Verifypage'
+import Aboutus from './components/aboutus/Aboutus'
 
 const App = () => {
   return (
@@ -21,7 +22,7 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/home' element={<Home />} />
-        <Route path='/help' element={<Help />} />
+        <Route path='/help' element={<Aboutus/>} />
         <Route path='/contactus' element={<Contact />} />
         <Route path='/notification' element={<Notification />} />
         <Route path='/setting' element={<Setting />} />

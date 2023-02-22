@@ -1,0 +1,72 @@
+.aboutus {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+}
+
+
+.heading {
+    color: blue;
+}
+
+.internalContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.leftContainer{
+    background-color: #112432; 
+    /* margin: 10px;  */
+    padding : 20px;
+    flex: 30%;
+}
+
+.rightContainer{
+    background-color: #35cc16; 
+    /* margin: 10px;  */
+    padding: 20px;
+    flex: 30%;
+}
+
+.infoContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 2cm;
+}
+
+.service{
+    color: black;
+    background-color: rgb(48, 28, 174);
+    padding: 10px;
+
+}
+
+.contextContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    
+}
+
+.leftcontext{
+    color: black;
+    background-color: rgb(48, 28, 174);
+    padding: 10px;
+
+}
+
+.rightcontext{
+    color: black;
+    background-color: rgb(48, 28, 174);
+    padding: 10px;
+}
