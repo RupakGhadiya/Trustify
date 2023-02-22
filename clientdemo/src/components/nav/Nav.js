@@ -5,8 +5,9 @@ import { AiOutlineSetting } from 'react-icons/ai'
 import { IoMdNotificationsOutline } from 'react-icons/io'
 import { IoPersonOutline } from 'react-icons/io5'
 import { VscWorkspaceTrusted } from 'react-icons/vsc'
-import {FiLogIn} from 'react-icons/fi'
-import {BiLockOpenAlt} from 'react-icons/bi'
+import { FiLogIn } from 'react-icons/fi'
+import { BiLockOpenAlt } from 'react-icons/bi'
+import NavDropdown from 'react-bootstrap/NavDropdown';
 
 export default function Nav() {
     return (
@@ -19,7 +20,7 @@ export default function Nav() {
                 </li>
 
                 <li>
-                    <Link to="/help" className='linkaa'>Help Center</Link>
+                    <Link to="/verify" className='linkaa'>Verify Documents</Link>
                 </li>
 
                 <li>
@@ -31,27 +32,37 @@ export default function Nav() {
 
             <ul className='link_icon'>
                 <li>
-                    <Link to="/setting" className='iconaa'><AiOutlineSetting /></Link>
-                </li>
-
-                <li>
                     <Link to="/notification" className='iconaa'><IoMdNotificationsOutline /></Link>
                 </li>
 
                 <li>
-
-                    <Link to="/profile" className='iconaa'><IoPersonOutline /></Link>
+                    <Link to="/setting" className='iconaa'><AiOutlineSetting /></Link>
                 </li>
             </ul>
 
             <ul>
                 <li>
-                    <Link to="/login" className='login'><span className='loginlogo1'><FiLogIn /></span>Login</Link>
-                </li>
-
-                <li>
                     <Link to="/signup" className='login' ><span className='loginlogo1'><BiLockOpenAlt /></span>Sign Up</Link>
                 </li>
+                <li>
+                    <NavDropdown className='login' id="basic-nav-dropdown" title="Profile">
+                        <NavDropdown.Item>
+                            <Link to="/profile" className='login'>Profile</Link>
+                        </NavDropdown.Item>
+                        <NavDropdown.Item>
+                            <Link to="/profile" className='login'>Policies</Link>
+                        </NavDropdown.Item>
+                        <NavDropdown.Item>
+                            <Link className='login'>Change Theme</Link>
+                        </NavDropdown.Item>
+                        <NavDropdown.Divider />
+                        <NavDropdown.Item>
+                            <Link to="/login" className='login'><span className='loginlogo1'><FiLogIn /></span>Login</Link>
+                        </NavDropdown.Item>
+                    </NavDropdown>
+                </li>
+
+
             </ul>
         </nav>
     )

@@ -1,21 +1,23 @@
 import React from 'react'
+import { FC, useState } from 'react'
+
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+
+import { Carousel as ReactCarousel } from "react-responsive-carousel";
+
+const Icon = (
+  { icon }: { icon: string }
+) => (
+  <span className='material-symbols-outlined'>{icon}</span>
+);
+
+const yabs = ["menu", "lock", "settings"];
+
 
 const Profile = () => {
   return (
     <div>
-      <form method=''>
-        <div>
-          <div className='profile_pic'>
-            {/* pic  */}
-          </div>
-
-          <div className='user details'>
-            <h5>Rupak Ghadiya</h5>
-            <h6>web Developer</h6>
-            <p>refer video </p>
-          </div>
-        </div>
-      </form>
+      <h1>hii</h1>
     </div>
   )
 }

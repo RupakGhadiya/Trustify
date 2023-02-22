@@ -7,7 +7,7 @@ import Help from './components/help/Help'
 import Contact from './components/contact/Contact'
 import Notification from './components/notification/Notification'
 import Setting from './components/setting/Setting'
-import Profile from './components/profile/Profile'
+import Profile from './components/profile/Profile.js'
 import Login from './components/login/Login'
 import Signup from './components/signup/Signup'
 import Qronly from './components/home/Qronly/Qronly'
@@ -22,7 +22,7 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/home' element={<Home />} />
-        <Route path='/help' element={<Aboutus/>} />
+        <Route path='/aboutus' element={<Aboutus/>} />
         <Route path='/contactus' element={<Contact />} />
         <Route path='/notification' element={<Notification />} />
         <Route path='/setting' element={<Setting />} />
