@@ -37,6 +37,7 @@ const Qronly = () => {
     return (
 
         <div className="QRONLY">
+            <Qrform />
             <Card className='Qronlycard'>
                 <Card.Body>
                     <form className="qrform" onSubmit={downloadQRCode}>
@@ -44,13 +45,14 @@ const Qronly = () => {
                             <div className="qrcode" ref={qrRef}>{qrcode}</div>
                         </div>
                         <div className="urlgroup">
+                            
                             <input className="Qrurl" value={url} onChange={qrCodeEncoder} type="text" placeholder="Enter Url" />
                             <button type="submit" id="qrdownloadbtn" disabled={!url}> Download <span className='loginlogo'><BsDownload /></span></button>
                         </div>
                     </form>
                 </Card.Body>
             </Card>
-            <Qrform />
+
         </div>
     );
 };

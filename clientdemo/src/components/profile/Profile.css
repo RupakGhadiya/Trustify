@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@300&family=Mulish:wght@800&family=Poppins:wght@400;700&family=Sofia+Sans:wght@300;400;800&family=Ubuntu:wght@700&display=swap');
+.profile{
+    
+    display: flex;
+    vertical-align: middle;
+    background: url(../Verifypage/loginmain_bg.jpg);
+    background-size: cover;
+    height: 100%;
+    border-radius: 20px;
+    width: 96%;
+    margin: 2%;
+    margin-top: 2%;
+    padding: 1.5rem;
+}
+  .bloc-tabs {
+    display: flex;
+    
+  }
+  .tabs {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+    font-size: 1.2rem;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+    background: transparent;
+    cursor: pointer;
+    /* border-bottom: 1px solid rgba(0, 0, 0, 0.274); */
+    /* box-sizing: content-box; */
+    position: relative;
+    outline: none;
+    transition: transform .4s;
+  }
+
+  .tabs:hover{
+    transform: scale(1.1);
+  }
+  
+  
+  .active-tabs::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% + 2px);
+    height: 3px;
+    background: rgb(88, 147, 241);
+  }
+  
+  
+  
+  button {
+    border: none;
+    
+  }
+  .content-tabs {
+    flex-grow : 1;
+  }
+  .content {
+    /* background: white; */
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    display: none;
+  }
+  .active-content {
+    display: block;
+  }
+
+
+  .profile-leftside{
+    width: 22%;
+    border-right: 4px solid rgba(0, 0, 0, 0.25);
+    padding-right: 1rem;
+}
+.profile-leftside img{
+  background-color: white;
+    border-radius: 15px;  
+    height: 8rem;
+    width: 15rem;
+}

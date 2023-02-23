@@ -5,9 +5,11 @@ import NavigationCard from './navigationCard/NavigationCard'
 import Footer from '../Footer/Footer'
 const Home = () => {
   return (
-    <div><Demohero />
-    <NavigationCard />
-    <Footer/></div>
+    <div>
+      <Demohero />
+      <NavigationCard />
+      {/* <Footer /> */}
+    </div>
   )
 }
 

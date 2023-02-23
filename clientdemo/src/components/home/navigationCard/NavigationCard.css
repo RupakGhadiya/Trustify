@@ -43,7 +43,7 @@
     font-weight: 700;
 }
 .navcard_btngroup{
-    margin-left: 5.5rem;
+    margin-left: 12.5rem;
     margin-top: .4rem;
 }
 .genqr, .searchid{
@@ -93,12 +93,14 @@
     transition: all 0.2s ease;
   }
   .parent button:hover{
-    background-color: #3543ff;
-    color: white;
+    background-color: #ffffff;
+    border-radius: 20px;
+    color: rgb(0, 0, 0);
   }
   .parent button:active {
-    background-color: #0092e4;
+    background-color: #ffffff;
     box-shadow: 0 0 2px darkslategray;
+    color: black;
     transform: translateY(2px);
   }
   
@@ -148,3 +150,27 @@
     margin-left: 4.6rem;
   }
   
+
+
+
+
+.tabs2 {
+  color: black;
+  border-radius: 20px;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 300;
+  font-size: 1.2rem;
+  /* padding: 15px; */
+  text-align: center;
+  width: 100%;
+  background: transparent;
+  cursor: pointer;
+  /* border-bottom: 1px solid rgba(0, 0, 0, 0.274); */
+  /* box-sizing: content-box; */
+  position: relative;
+  outline: none;
+  transition: transform .4s;
+}
+.tabs:hover{
+  transform: scale(1);
+}
