@@ -1,72 +1,73 @@
-.aboutus {
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@300&family=Mulish:wght@800&family=Poppins:wght@400;700&family=Sofia+Sans:wght@300;400;800&family=Ubuntu:wght@700&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+.hero_container{
     display: flex;
-    flex-direction: column;
+    padding: 2.5rem;
+    /* border: 2px solid black; */
+}
+.left_sidehero{
+    width: 50%;
+
+}
+.right_sidehero{
+    width: 50%;
+}
+.hero_text1{
+    font-family: 'Work Sans', sans-serif;
+    
+    font-weight: 700;
+    margin-top: 1.5rem;
+    font-size: 2.6rem;
+    line-height: 3.625rem;
+    letter-spacing: -0.015em;
+    width: 90%;
+    color: rgb(16, 15, 15);
+}
+.hero_text2{
+    font-family: 'Work Sans', sans-serif;
+    
+    color: #596080;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+.aboutus{
+    max-width: 100%;
+    padding-right: 6rem;
+    padding-left: 6rem;
+}
+
+.heading{
+    font-family: 'Work Sans', sans-serif;
+    display: flex;
     align-items: center;
     justify-content: center;
-    height: fit-content;
 }
-
-
-.heading {
-    color: blue;
-}
-
-.internalContainer{
+.container{
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 100%;
 }
 
-.leftContainer{
-    background-color: #112432; 
-    /* margin: 10px;  */
-    padding : 20px;
-    flex: 30%;
-}
 
-.rightContainer{
-    background-color: #35cc16; 
-    /* margin: 10px;  */
-    padding: 20px;
-    flex: 30%;
-}
-
-.infoContainer{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 100%;
-    margin: 2cm;
-}
-
-.service{
-    color: black;
-    background-color: rgb(48, 28, 174);
-    padding: 10px;
+.card-title{
+    text-align: center;
 
 }
 
-.contextContainer{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 100%;
-    
+.column{
+    display: contents;
+    flex: 33.33%;
+    padding: 5px;
 }
 
-.leftcontext{
-    color: black;
-    background-color: rgb(48, 28, 174);
-    padding: 10px;
-
+.hide{
+    display: none;
 }
 
-.rightcontext{
-    color: black;
-    background-color: rgb(48, 28, 174);
-    padding: 10px;
+.card-title:hover + .hide{
+    display:block;
+    color:black;
+    text-align: center;
 }
