@@ -7,16 +7,15 @@ import Help from './components/help/Help'
 import Contact from './components/contact/Contact'
 import Notification from './components/notification/Notification'
 import Setting from './components/setting/Setting'
-
-import Login from './components/login/Login'
 import Signup from './components/signup/Signup'
 import Qronly from './components/home/Qronly/Qronly'
 import Errorpage from './components/error page/Errorpage'
 import Verifypage from './components/Verifypage/Verifypage'
-import Aboutus from './components/aboutus/Aboutus'
 
 import Qrform from './components/home/Qronly/Qrform'
-import Profile from './components/profile/Profile'
+import About from './components/profile/About'
+import Login from './components/login/Login'
+import AboutTrustify from './components/aboutus/AboutTrustify'
 
 
 const App = () => {
@@ -26,12 +25,12 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/home' element={<Home />} />
-        <Route path='/aboutus' element={<Aboutus/>} />
+        <Route path='/abouttrustify' element={<AboutTrustify/>} />
         <Route path='/contactus' element={<Contact />} />
         <Route path='/notification' element={<Notification />} />
         <Route path='/setting' element={<Setting />} />
-        <Route path='/profile' element={<Profile/>} />
-        <Route path='/login' element={<Login />} />
+        <Route path='/about' element={<About/>} />
+        <Route path='/login' element={<Login/>} />
         <Route path='/signup' element={<Signup />} />
         <Route path='/qronly' element={<Qrform />} />
         <Route path='/verify' element={<Verifypage />} />

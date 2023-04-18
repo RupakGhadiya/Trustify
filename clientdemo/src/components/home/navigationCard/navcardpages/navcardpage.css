@@ -5,7 +5,7 @@
 }
 .card{
     width: fit-content;
-    /* display: flex; */
+    display: flex;
 }
 .card-body{
     display: flex;
@@ -30,4 +30,8 @@
     font-family: 'Work Sans', sans-serif;
     margin-left: 5px;
     margin-top: 10px;
+    cursor: pointer;
+}
+.recentcard_name:hover{
+    color: blue;
 }

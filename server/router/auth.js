@@ -12,33 +12,6 @@ router.get('/', (req, res) => {
     res.send(`hello2`);
 });
 
-// using promice method 
-
-// router.post('/register', (req, res) => {
-//     const { fname, lname, email, password, cpassword} = req.body;
-
-//     // valedation
-//     if (!fname || !lname || !email || !password || !cpassword){
-//         return res.status(422).json({ error: "Plz fill the data"});
-//     }
-
-//     User.findOne({email:email})
-//     .then((userExist) => {
-//         if(userExist){
-//             return res.status(422).json({error: "Email already exist"});
-//         }
-
-//         const user = new User({fname, lname, email, password, cpassword})
-
-//         user.save().then(() =>{
-//             res.status(201).json({message: "User register successfully"});
-//         }).catch((err)=> res.status(500).json({error: "fail to register"}));
-//     }).catch(err => { consol.log(err); });
-// })
-
-
-// using async
-
 router.post('/register', async (req, res) => {
     const { fname, lname, email, password, cpassword } = req.body;
 
@@ -110,7 +83,41 @@ router.post('/login', async (req, res) => {
 // about us
 
 router.get('/about', authenticate, (req, res) => {
-	res.send(`About sec`);
+    console.log(`about sec`)
+	res.send(req.rootUser);
+});
+
+
+// data of contact us
+
+router.get('/getdata', authenticate, (req, res) => {
+    console.log(`contact sec`)
+	res.send(req.rootUser);
+});
+
+// contactus 
+
+router.post('/contact', authenticate, async (req, res) => {
+    try{
+        const {name, email, message} = req.body;
+
+        if (!name || !email || !message){
+            console.log("err in cantact page");
+            return res.json({error: "plz fill the contact form"});
+        }
+
+        const userContact = await User.findOne({_id:req.userID});
+        if(userContact){
+            const userMessage = await userContact.addMessage(name,email,message);
+            await userContact.save();
+
+            res.status(201).json ({message: "user contact successfully"});
+        }
+
+    }catch(error){
+        console.log(error);
+
+    }
 });
 
 module.exports = router;

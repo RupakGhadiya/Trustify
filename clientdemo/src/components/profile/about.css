@@ -3,10 +3,13 @@
     
     display: flex;
     vertical-align: middle;
-    background: url(../Verifypage/loginmain_bg.jpg);
+    /* background: url(../Verifypage/loginmain_bg.jpg); */
+    background-color: white;
+    box-shadow: 5px 5px 10px rgb(127, 127, 127);
     background-size: cover;
     height: 100%;
     border-radius: 20px;
+    border: 1px solid rgb(65, 65, 65);
     width: 96%;
     margin: 2%;
     margin-top: 2%;
@@ -44,7 +47,7 @@
     top: -5px;
     left: 50%;
     transform: translateX(-50%);
-    width: calc(100% + 2px);
+    width: calc(50% + 2px);
     height: 3px;
     background: rgb(88, 147, 241);
   }
@@ -60,7 +63,7 @@
   }
   .content {
     /* background: white; */
-    padding: 20px;
+    /* padding: 20px; */
     width: 100%;
     height: 100%;
     display: none;
@@ -72,11 +75,11 @@
 
   .profile-leftside{
     width: 22%;
-    border-right: 4px solid rgba(0, 0, 0, 0.25);
+    border-right: 2px solid rgba(0, 0, 0, 0.25);
     padding-right: 1rem;
 }
 .profile-leftside img{
-  background-color: white;
+  background-color: rgba(25, 1, 245, 0.139);
     border-radius: 15px;  
     height: 8rem;
     width: 15rem;

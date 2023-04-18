@@ -37,9 +37,9 @@ app.get('/', (req, res) => {
 // 	res.send(`About sec`);
 // });
 
-app.get('/contact', (req, res) => {
-	res.send(`contact sec`);
-});
+// app.get('/contact', (req, res) => {
+// 	res.send(`contact sec`);
+// });
 
 app.listen(PORT, () => {
 	console.log(`server is running in ${PORT}`);

@@ -1,18 +1,12 @@
 import React from 'react'
 // import './LoginSignup.css'
-import { Link } from 'react-router-dom'
 import Card from 'react-bootstrap/Card';
 import Form from 'react-bootstrap/Form';
-import { TbArrowNarrowRight } from 'react-icons/tb'
-import { MdSupervisorAccount } from 'react-icons/md'
-import { Si1Password } from 'react-icons/si'
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Toast from 'react-bootstrap/Toast';
-import Qronly from './Qronly';
-
 import { useRef } from "react";
 import { QRCodeCanvas } from "qrcode.react";
 import { BsDownload } from 'react-icons/bs'
@@ -20,7 +14,7 @@ import { BsDownload } from 'react-icons/bs'
 
 const Qrform = () => {
     const [showA, setShowA] = useState(false);
-    const [showB, setShowB] = useState(false);
+    const [showB, setShowB] = useState(true);
 
     const toggleShowA = () => setShowA(!showA);
     const toggleShowB = () => setShowB(!showB);
@@ -59,63 +53,113 @@ const Qrform = () => {
 
 
     return (
-        <div className='Qrform'>
-            <Card className='qrCard'>
-                <Card.Body>
-                    <Form >
-                        <div className="qrwrapper">
-                            <div className="inner-warpper text-center">
-                                <h2 className="title1"><b>Welcome!</b></h2><br /><br /><br></br>
-                                <h5 className="title2">Please fill up the form to create your event  </h5>
-                                <h5 className="title2">Create a event and upload a information about the documents which you want to make a Qr of in excel formate and we will send you a list of a QRs.  </h5>
-                                <form action="" id="formvalidate">
-                                    <div className="input-group inputgroup" >
-                                        <input className="form-control input2" name="userName" id="userName" type="text" placeholder=" Institute Name " />
-                                    </div>
-                                    <div style={{ display: 'flex', gap: '1rem' }}>
-                                        <div className="input-group inputgroup">
-                                            <input className="form-control input2" name="userPassword" id="userPassword" type="text" placeholder=" Event Name" />
-                                        </div>
-                                        <div className="input-group inputgroup">
-                                            <input className="form-control input2" name="userPassword" id="userPassword" type="text" placeholder=" Event Type" />
-                                        </div>
-                                    </div>
-                                    <div className="input-group inputgroup" >
-                                        <input className="form-control input2" name="userName" id="userName" type="text" placeholder=" Subject " />
-                                    </div>
-                                    <div style={{ display: 'flex', gap: '1rem' }}>
-                                        <div className="input-group inputgroup">
-                                            <input className="form-control input2" name="userName" id="userName" type="date" placeholder=" Start Date " />
-                                        </div>
-                                        <div className="input-group inputgroup">
-                                            <input className="form-control input2" name="userPassword" id="userPassword" type="date" placeholder="Valid Till" />
-                                        </div>
-                                    </div>
-                                    <div className="input-group inputgroup" style={{ height: '10rem' }}>
-                                        <input className="form-control input2" name="userPassword" id="userPassword" type="message" placeholder=" About Organization" />
-                                    </div>
-                                    <Form.Group controlId="formFile" className="mb-3">
-                                        <Form.Label style={{ float: "left" }}>Upload Excel</Form.Label>
-                                        <Form.Control type="file" multiple  />
-                                    </Form.Group>
-                                    <div>
-                                        <button type="submit" id="login">Create Event <span className='loginlogo'><TbArrowNarrowRight /></span></button>
-                                    </div>
+        <div style={{ padding: "2rem", display: "flex" }}>
 
-                                </form>
-                            </div>
-                        </div>
-                    </Form>
-                </Card.Body>
-                <hr />
-                <div style={{ display: 'flex', textAlign: "center" }}>
-                    <div style={{ width: '50%', borderRight: "2px solid gray", padding: "1rem" }}>
-                        <Button onClick={toggleShowA} className="mb-2">
+            <div>
+                <Form style={{ width: "100%", paddingRight: "2rem", borderRight: "2px solid gray" }}>
+                    <Form.Group className="mb-3" controlId="formGridAddress1">
+                        <Form.Label>Institute Name</Form.Label>
+                        <Form.Control placeholder="Name of institute you are register for" />
+                    </Form.Group>
+                    <Row className="mb-3">
+                        <Form.Group as={Col} controlId="formGridEmail">
+                            <Form.Label>Event name</Form.Label>
+                            <Form.Control type="text" placeholder="Name of your event" />
+                        </Form.Group>
+
+                        <Form.Group as={Col} controlId="formGridPassword">
+                            <Form.Label>Event Type</Form.Label>
+                            <Form.Control type="text" placeholder="eg:-(sports)" />
+                        </Form.Group>
+                    </Row>
+
+                    <Form.Group className="mb-3" controlId="formGridAddress1">
+                        <Form.Label>Subject</Form.Label>
+                        <Form.Control placeholder="what is the subject of your event" />
+                    </Form.Group>
+
+                    <Row className="mb-3">
+                        <Form.Group as={Col} controlId="formGridEmail">
+                            <Form.Label>Start Date</Form.Label>
+                            <Form.Control type="Date" placeholder="" />
+                        </Form.Group>
+
+                        <Form.Group as={Col} controlId="formGridPassword">
+                            <Form.Label>Valid till</Form.Label>
+                            <Form.Control type="Date" placeholder="" />
+                        </Form.Group>
+                    </Row>
+
+                    <Form.Group className="mb-3" controlId="formGridAddress2">
+                        <Form.Label>Location</Form.Label>
+                        <Form.Control placeholder="Location, studio, or floor" />
+                    </Form.Group>
+
+                    <Row className="mb-3">
+                        <Form.Group as={Col} controlId="formGridCity">
+                            <Form.Label>City</Form.Label>
+                            <Form.Control />
+                        </Form.Group>
+
+                        <Form.Group as={Col} controlId="formGridState">
+                            <Form.Label>State</Form.Label>
+                            <Form.Select style={{ border: "1px solid black" }} defaultValue="Choose...">
+                                <option>Choose...</option>
+                                <option>Andhra Pradesh</option>
+                                <option>Arunachal Pradesh</option>
+                                <option>Assam</option>
+                                <option>Bihar</option>
+                                <option>Chhattisgarh</option>
+                                <option>Goa</option>
+                                <option>Gujarat</option>
+                                <option>Haryana</option>
+                                <option>Himachal Pradesh</option>
+                                <option>Jharkhand</option>
+                                <option>Karnataka</option>
+                                <option>Kerala</option>
+                                <option>Madhya Pradesh</option>
+                                <option>Maharashtra</option>
+                                <option>Manipur</option>
+                                <option>Meghalaya</option>
+                                <option>Mizoram</option>
+                                <option>Nagaland</option>
+                                <option>Odisha</option>
+                                <option>Punjab</option>
+                                <option>Rajasthan</option>
+                                <option>Sikkim</option>
+                                <option>Tamil Nadu</option>
+                                <option>Telangana</option>
+                                <option>Tripura</option>
+                                <option>Uttar Pradesh</option>
+                                <option>Uttarakhand</option>
+                                <option>West Bengal</option>
+
+
+                            </Form.Select>
+                        </Form.Group>
+
+                        <Form.Group as={Col} controlId="formGridZip">
+                            <Form.Label>Zip</Form.Label>
+                            <Form.Control />
+                        </Form.Group>
+                    </Row>
+
+                    <Form.Group className="mb-3" id="formGridCheckbox">
+                        <Form.Check type="checkbox" label="Check Terms and Condition" />
+                    </Form.Group>
+
+                    <Button variant="primary" type="submit">
+                        Submit
+                    </Button>
+
+
+                    <div style={{ width: '100%', marginTop: "2rem" }}>
+                        <Button style={{ float: "left" }} onClick={toggleShowA} className="mb-2">
                             Register individual User
                         </Button>
                         <Toast show={showA} onClose={toggleShowA} style={{ width: '100%' }}>
                             <Toast.Header>
-                                <strong className="me-auto">Register individual User</strong>
+                                <strong className="me-auto"></strong>
                             </Toast.Header>
                             <Toast.Body>
                                 <h5 className="title2">   if making an individual entry, provide us appropriate information.</h5>
@@ -161,40 +205,44 @@ const Qrform = () => {
                             </Toast.Body>
                         </Toast>
                     </div>
+                </Form>
+            </div>
 
 
-                    <div style={{ width: '50%', padding: "1rem" }}>
-                        <Button onClick={toggleShowB} className="mb-2">
-                            Generate QR directly
-                        </Button>
-                        <Toast show={showB} onClose={toggleShowB} style={{ width: '100%' }}>
-                            <Toast.Header>
-                                <strong className="me-auto">Generate QR directly</strong>
-                            </Toast.Header>
-                            <Toast.Body>
-                                <h5 className="title2">Simply enter the URL of your verification page if you have lost your QR code.</h5>
-                                <br /><hr />
-                                <Card className='Qronlycard'>
-                                    <Card.Body>
 
-                                        <form className="qrform" onSubmit={downloadQRCode}>
-                                            <div className="qrdiv" style={{ marginLeft: "6rem" }}>
-                                                <div className="qrcode" ref={qrRef}>{qrcode}</div>
-                                            </div><br />
-                                            <div className="urlgroup">
-                                                <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                                                    <Form.Control style={{ width: "28.5rem" }} value={url} onChange={qrCodeEncoder} type="text" placeholder="Enter Url / User ID" />
-                                                </Form.Group>
-                                                <button type="submit" id="qrdownloadbtn" disabled={!url}><BsDownload /></button>
-                                            </div>
-                                        </form>
-                                    </Card.Body>
-                                </Card>
-                            </Toast.Body>
-                        </Toast>
-                    </div>
-                </div>
-            </Card>
+
+            <div style={{ width: '50%', padding: "2rem", paddingTop: "0rem" }}>
+                <Button onClick={toggleShowB} className="mb-2">
+                    Generate QR directly
+                </Button>
+                <Toast show={showB} onClose={toggleShowB} style={{ width: '100%' }}>
+                    <Toast.Header>
+                        <strong className="me-auto">Generate QR directly</strong>
+                    </Toast.Header>
+                    <Toast.Body>
+                        <h5 className="title2">Simply enter the URL of your verification page if you have lost your QR code.</h5>
+                        <br /><hr />
+                        <Card className='Qronlycard'>
+                            <Card.Body>
+
+                                <form className="qrform" onSubmit={downloadQRCode}>
+                                    <div className="qrdiv" style={{ marginLeft: "6rem" }}>
+                                        <div className="qrcode" ref={qrRef}>{qrcode}</div>
+                                    </div><br />
+                                    <div className="urlgroup">
+                                        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                                            <Form.Control style={{ width: "26.5rem" }} value={url} onChange={qrCodeEncoder} type="text" placeholder="Enter Url / User ID" />
+                                        </Form.Group>
+                                        <button type="submit" id="qrdownloadbtn" disabled={!url}><BsDownload /></button>
+                                    </div>
+                                </form>
+                            </Card.Body>
+                        </Card>
+                    </Toast.Body>
+                </Toast>
+            </div>
+
+
         </div>
     )
 }

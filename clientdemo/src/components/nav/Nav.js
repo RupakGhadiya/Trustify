@@ -47,7 +47,7 @@ export default function Nav() {
                 <li>
                     <NavDropdown className='login' id="basic-nav-dropdown" title="Profile">
                         <NavDropdown.Item>
-                            <Link to="/profile" className='login'>Your Profile</Link>
+                            <Link to="/about" className='login'>Your Profile</Link>
                         </NavDropdown.Item>
                         <NavDropdown.Item>
                             <Link to="/" className='login'>Policies</Link>

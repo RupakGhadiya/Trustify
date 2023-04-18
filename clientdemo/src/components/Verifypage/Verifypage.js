@@ -28,7 +28,7 @@ const Verifypage = () => {
         </label>
         <div className='eventdetails'>
           <label className='verifylabel'><span className='verifyspanlogo'><AiFillTags /></span> Event Name
-            <h2 className='eventname'>Coad Break 3.0</h2>
+            <h2 className='eventname'>CodeBreak 3.0</h2>
           </label>
           <label className='verifylabeltype'><span className='verifyspanlogo'><VscTypeHierarchy /></span> Event Type
             <h2 className='eventtype'>Hackathon</h2>

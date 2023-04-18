@@ -23,6 +23,26 @@ const userSchema = new mongoose.Schema({
         type: String,
         require: true
     },
+    date: {
+        type: Date,
+        default:Date.now
+    },
+    message:[
+        {
+            name:{
+                type: String,
+                // require: true
+            },
+            email:{
+                type: String,
+                // require: true
+            },
+            messages:{
+                type: String,
+                require: true
+            }
+        }
+    ],
     tokens: [
         {
             token: {
@@ -57,6 +77,21 @@ userSchema.methods.generateAuthToken = async function () {
         console.log(err)
     }
 }
+
+// store of message 
+
+userSchema.methods.addMessage = async function (name,email,message) {
+    try{
+        this.messages = this.messages.concat({name,email,message});
+        await this.save();
+        return this,messages;
+
+    } catch (error){
+        console.log(error)
+    }
+
+}
+
 
 const User = mongoose.model('USER', userSchema);
 

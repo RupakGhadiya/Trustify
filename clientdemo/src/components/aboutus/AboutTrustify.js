@@ -1,9 +1,9 @@
 import { Container } from "react-bootstrap";
-import './aboutus.css';
+import './AboutTrustify.css';
 import { useState } from "react";
 
 
-const Aboutus = () => {
+const AboutTrustify = () => {
 
     const [serviceObj, setServiceObj] = useState("service_1");
 
@@ -58,4 +58,4 @@ const Aboutus = () => {
 
 }
 
-export default Aboutus
+export default AboutTrustify
